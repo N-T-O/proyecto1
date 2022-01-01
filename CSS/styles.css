@@ -1,4 +1,11 @@
-/*--------------------------------------*/
+:root{
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+}
+ /*--------------------------------------*/
 /*....esta seccion delimitada por '-'..... 
 .....hace que 1rem sea igual a 10px.....*/
 html{
@@ -6,13 +13,15 @@ html{
 }
 body{
     font-size: 16px;
+    font-family: 'Krub', sans-serif;
 }
 /*--------------------------------------*/
-h1{
+.titulo{
     text-align: center;
     font-size: 3.8rem;
+    font-family: 'Krub', sans-serif;
 }
 
-span{
+.titulo span{
     font-size: 2rem;
-}
+} 
