@@ -5,21 +5,21 @@
     --secundario: #0097A7;
     --gris: #757575;
 }
-
+ 
 html{
-    font-size: 62.5%;/*<-----esto hace que 1rem sea igual a 10px*/
+    font-size: 62.5%;/*<------esto hace que 1rem sea igual a 10px*/
     box-sizing: border-box;
 
 }
 *, *:before, *:after {
     box-sizing: inherit;
-}
-  
+  }
+
 body{
-    font-size: 16px;/*<-----esto hace que 1rem sea igual a 10px*/
+    font-size: 16px;/*<------esto hace que 1rem sea igual a 10px*/
     font-family: 'Krub', sans-serif;
 }
-
+/*--------------------------------------*/
 .titulo{
     text-align: center;
     font-size: 3.8rem;
@@ -73,10 +73,4 @@ body{
 .navegacion-principal a:hover{
     background-color: var(--primario);
     color: var(--oscuro);
-}
-
-.hero{
-    background-image: url(../img/hero.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
 }
