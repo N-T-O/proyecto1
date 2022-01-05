@@ -5,7 +5,7 @@
     --secundario: #0097A7;
     --gris: #757575;
 }
- 
+ /* ##### globales ###### */
 html{
     font-size: 62.5%;/*<------esto hace que 1rem sea igual a 10px*/
     box-sizing: border-box; /*<---box-sizing*/
@@ -18,7 +18,50 @@ html{
 body{
     font-size: 16px;/*<------esto hace que 1rem sea igual a 10px*/
     font-family: 'Krub', sans-serif;
+    background-image: linear-gradient( to top, #DFE9F3 0%, var(--blanco) 100%);
 }
+
+.contenedor{
+    max-width:80rem;
+     /*margin-top:0;
+     margin-right:auto;
+     margin-bottom:0;
+     margin-left:auto;
+     es equivalente a la linea de abajo*/
+ 
+     /*margin: 0 auto 0 auto;
+     es equivalente a la linea de abajo*/
+     margin: 0 auto;
+ }
+ 
+ .boton{
+     background-color: var(--secundario);
+     color: var(--blanco);
+     padding: 1rem 3rem;
+     margin-top: 3rem;
+     font-size: 2rem;
+     text-decoration: none;
+     text-transform: uppercase;
+     font-weight: bold;
+     border-radius: .5rem;
+     width: 90%;
+     text-align:center;
+ }
+ @media (min-width: 768px){
+    .boton{
+        width: auto;
+    }
+}
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px -1px rgba(107,107,107,0.58);
+    -moz-box-shadow: 0px 5px 15px -1px rgba(107,107,107,0.58);
+    box-shadow: 0px 5px 15px -1px rgba(107,107,107,0.58);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* ##### tipografia ##### */
 h1{
     font-size: 3.8rem;
 }
@@ -39,21 +82,14 @@ h1,h2,h3{
 }
 
 .titulo span{
-    font-size: 2rem;
+    font-size: 2.7rem;
+    text-decoration: underline;
+    color: var(--primario);
+    font-weight: bold;
 } 
 
-.contenedor{
-   max-width:80rem;
-    /*margin-top:0;
-    margin-right:auto;
-    margin-bottom:0;
-    margin-left:auto;
-    es equivalente a la linea de abajo*/
 
-    /*margin: 0 auto 0 auto;
-    es equivalente a la linea de abajo*/
-    margin: 0 auto;
-}
+
 
 .nav-bg{
     background-color: var(--secundario);
@@ -92,8 +128,9 @@ h1,h2,h3{
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
-    
+    /* padding: 20px; */
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero{
@@ -115,9 +152,18 @@ h1,h2,h3{
 
 }
 
-.ubicacion{
+.contenido-hero .ubicacion{
     display: flex;
     align-items: flex-end;
 
 }
+
+@media (min-width: 768px){
+    .servicios{
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr; es lo mismo que la siguiente columna */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
     
