@@ -46,11 +46,15 @@ body{
      border-radius: .5rem;
      width: 90%;
      text-align:center;
+     border: none;
  }
  @media (min-width: 768px){
     .boton{
         width: auto;
     }
+}
+.boton:hover{
+    cursor: pointer;
 }
 .sombra{
     -webkit-box-shadow: 0px 5px 15px -1px rgba(107,107,107,0.58);
@@ -64,6 +68,7 @@ body{
 /* ##### tipografia ##### */
 h1{
     font-size: 3.8rem;
+    margin: .50rem;
 }
 h2{
     font-size: 2.8rem;
@@ -88,7 +93,23 @@ h1,h2,h3{
     font-weight: bold;
 } 
 
+/** utilidades **/
+.w-100{
+    width: 100%;
+}
+@media (min-width: 768px){
+    .w-100{
+        width: auto;
+    }
+}
 
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+    
+    justify-content: end;
+}
 
 
 .nav-bg{
@@ -127,7 +148,7 @@ h1,h2,h3{
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 450px;
+    height: 370px;
     /* padding: 20px; */
     position: relative;
     margin-bottom: 2rem;
@@ -190,4 +211,61 @@ h1,h2,h3{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.formulario{
+    background-color: var(--gris);
+    width: min( 60rem, 100%); /* toma el valor que sea mas pequeño entre los dos parametros */
+    margin: 0 auto ; /* se puede centrar asi cuando el padre se a un displa block */
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color:var(--primario)
+}
+
+@media (min-width: 768px){
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;        
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+        grid-column: 1 / 3;
+    }
+}
+.campo{
+    margin-bottom: 1rem;
+
+}
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius:1.5rem ;
+}
+
+.campo textarea{
+    height: 20rem;
+}
+
+.footer{
+    text-align: center;
 }
