@@ -9,6 +9,7 @@
 html{
     font-size: 62.5%;/*<------esto hace que 1rem sea igual a 10px*/
     box-sizing: border-box; /*<---box-sizing*/
+    scroll-snap-type: y mandatory;/* efecto de scroll --> 183 - 186*/
 
 }
 *, *:before, *:after {/*<---box-sizing...*/
@@ -119,8 +120,8 @@ h1,h2,h3{
 .navegacion-principal{
    display:flex;
    flex-direction: column;
-   
 }
+
 @media (min-width: 768px){
     .navegacion-principal{
         flex-direction: row;
@@ -179,6 +180,12 @@ h1,h2,h3{
 
 }
 
+.servicios, 
+.navegacion-principal,
+.formulario{/* efecto de scroll */
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
 @media (min-width: 768px){
     .servicios{
         display: grid;
